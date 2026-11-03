@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="USTA BOR — ishonchli ustalarni tez va oson toping.">
+  <title>USTA BOR — Ishonchli usta toping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="USTA BOR bosh sahifa">
+        <span class="brand-symbol">⌂</span>
+        <span><strong>USTA <b>BOR</b></strong><small>Ishonchli usta — bir qadamda</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menyuni ochish">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a class="active" href="#home">Bosh sahifa</a>
+        <a href="#ustalar">Ustalar</a>
+        <a href="#xizmatlar">Xizmatlar</a>
+        <a href="#biz-haqimizda">Biz haqimizda</a>
+        <a href="#aloqa">Aloqa</a>
+      </nav>
+      <a class="nav-cta" href="#usta-bol">Usta bo‘lish <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> USTALAR PLATFORMASI</span>
+          <h1>Yaxshi ustani<br><em>topish</em> endi oson!</h1>
+          <p>Uyingiz va biznesingiz uchun ishonchli ustalarni toping. Sifatli xizmat — bir qadamda.</p>
+          <form class="search-panel" id="searchForm">
+            <span class="search-icon">⌕</span>
+            <input id="searchInput" type="search" placeholder="Usta yoki kasb nomini yozing..." aria-label="Usta qidirish">
+            <button type="submit">Qidirish <span>→</span></button>
+          </form>
+          <div class="hero-location"><span>📍</span> Toshkent, O‘zbekiston <span class="chevron">⌄</span></div>
+        </div>
+        <div class="hero-points">
+          <div><b>✓</b> Ishonchli ustalar</div>
+          <div><b>✓</b> Tez bog‘lanish</div>
+          <div><b>✓</b> Qulay xizmat</div>
+          <div><b>✓</b> Yuqori sifat</div>
+          <div class="trust-seal"><strong>100%</strong><span>ISHONCH</span><small>★★★★★</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories container" id="xizmatlar">
+      <button class="category active" data-category="all"><span>✣</span>Barchasi</button>
+      <button class="category" data-category="Santexnik"><span>🔧</span>Santexnik</button>
+      <button class="category" data-category="Elektrik"><span>ϟ</span>Elektrik</button>
+      <button class="category" data-category="Quruvchi"><span>▥</span>Quruvchi</button>
+      <button class="category" data-category="Bo‘yoqchi"><span>▰</span>Bo‘yoqchi</button>
+      <button class="category" data-category="Avtomobil ustasi"><span>🚘</span>Avtomobil ustasi</button>
+      <button class="category" data-category="Duradgor"><span>🪚</span>Duradgor</button>
+      <button class="category" data-category="Konditsioner ustasi"><span>❄</span>Konditsioner</button>
+      <button class="category" data-category="Payvandchi"><span>⚒</span>Payvandchi</button>
+      <button class="category" data-category="Mebel ustasi"><span>🪑</span>Mebel ustasi</button>
+      <button class="category" data-category="Tom ustasi"><span>🏠</span>Tom ustasi</button>
+      <button class="category" data-category="Maishiy texnika ustasi"><span>🔌</span>Maishiy texnika</button>
+    </section>
+
+    <section class="masters-section" id="ustalar">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="gold-line"></span><div><h2>Ustalar katalogi</h2><p>Kasblar bo‘yicha bo‘lingan ishonchli mutaxassislar</p></div></div>
+          <span class="results-count" id="resultsCount">12 ta usta</span>
+        </div>
+        <div class="toolbar">
+          <label class="select-wrap">Saralash:
+            <select id="sortSelect"><option value="rating">Reyting bo‘yicha</option><option value="name">Ism bo‘yicha</option></select>
+          </label>
+          <label class="select-wrap">Shahar:
+            <select id="citySelect"><option value="all">Barcha shaharlar</option><option>Toshkent</option><option>Samarqand</option><option>Andijon</option><option>Buxoro</option></select>
+          </label>
+        </div>
+        <div id="professionSections"></div>
+        <div class="empty-state" id="emptyState" hidden>Usta topilmadi. Boshqa so‘z bilan qidirib ko‘ring.</div>
+      </div>
+    </section>
+
+    <section class="join-section" id="usta-bol">
+      <div class="container join-card">
+        <div class="join-icon">♧</div>
+        <div><span class="eyebrow">USTALAR UCHUN</span><h2>Siz ham ustamisiz?</h2><p>USTA BOR platformasida profilingizni yarating va yangi mijozlarni toping.</p></div>
+        <a class="gold-button" href="#royxatdan-otish">Ro‘yxatdan o‘tish <span>→</span></a>
+      </div>
+      <div class="container registration-wrap" id="royxatdan-otish">
+        <form class="registration-form" id="registrationForm">
+          <h3>Usta sifatida ro‘yxatdan o‘tish</h3>
+          <p>Ma’lumotlaringizni kiriting. Siz bilan bog‘lanamiz.</p>
+          <div class="form-grid">
+            <input name="name" placeholder="Ism va familiya" required>
+            <input name="phone" type="tel" placeholder="+998 90 123 45 67" required>
+            <select name="profession" required><option value="">Kasbingizni tanlang</option><option>Santexnik</option><option>Elektrik</option><option>Quruvchi</option><option>Bo‘yoqchi</option><option>Avtomobil ustasi</option><option>Duradgor</option><option>Konditsioner ustasi</option><option>Payvandchi</option><option>Mebel ustasi</option><option>Tom ustasi</option><option>Maishiy texnika ustasi</option></select>
+            <select name="city" required><option value="">Shaharni tanlang</option><option>Toshkent</option><option>Samarqand</option><option>Andijon</option><option>Buxoro</option></select>
+          </div>
+          <button class="gold-button" type="submit">Ariza yuborish →</button>
+          <div class="form-message" id="formMessage" aria-live="polite"></div>
+        </form>
+      </div>
+
+    <section class="why-section" id="biz-haqimizda">
+      <div class="container">
+        <div class="section-heading centered"><div><span class="eyebrow">NEGA USTA BOR?</span><h2>Usta topishning qulay yo‘li</h2></div></div>
+        <div class="benefits">
+          <article><span>✓</span><h3>Ishonchli mutaxassislar</h3><p>Ustalarni tanlashda reyting va mijozlar fikriga qarang.</p></article>
+          <article><span>⚡</span><h3>Tez aloqa</h3><p>Kerakli usta bilan telefon orqali tez bog‘laning.</p></article>
+          <article><span>₸</span><h3>Qulay tanlov</h3><p>Xizmat turi va shahar bo‘yicha o‘zingizga mos ustani toping.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="aloqa">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#"><span class="brand-symbol">⌂</span><span><strong>USTA <b>BOR</b></strong><small>Ishonchli usta — bir qadamda</small></span></a>
+      <p>© 2026 USTA BOR. Barcha huquqlar himoyalangan.</p>
+      <a href="tel:+998900000000">☎ +998 90 000 00 00</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="masterModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box"><button class="modal-close" data-close aria-label="Yopish">×</button><div id="modalContent"></div></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
